@@ -1,0 +1,33 @@
+#include <stdio.h>
+
+int main() {
+    int vector[5];
+    int posicion, nuevoValor;
+
+    // Cargar vector
+    printf("Ingrese 5 valores:\n");
+    for(int i = 0; i < 5; i++) {
+        printf("Valor %d: ", i + 1);
+        scanf("%d", &vector[i]);
+    }
+
+    // Modificar un elemento
+    printf("\nIngrese la posicion a modificar (0 a 4): ");
+    scanf("%d", &posicion);
+
+    if(posicion >= 0 && posicion < 5) {
+        printf("Ingrese el nuevo valor: ");
+        scanf("%d", &nuevoValor);
+        vector[posicion] = nuevoValor;
+    } else {
+        printf("Posicion invalida.\n");
+    }
+
+    // Mostrar vector
+    printf("\nDatos del vector:\n");
+    for(int i = 0; i < 5; i++) {
+        printf("%d\n", vector[i]);
+    }
+
+    return 0;
+}
